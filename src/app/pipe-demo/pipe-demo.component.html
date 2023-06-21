@@ -1,0 +1,46 @@
+<body>
+    <h1>Date Pipe</h1>
+
+    <div>
+        Today's Date :- {{presentDate}}<br>
+        Date :- {{presentDate | date}}<br>
+        short Date :-{{presentDate | date :'shortDate'}}<br>
+        full Date :-{{presentDate | date :'fullDate' | uppercase}}<br>
+        Formatted Date :-{{presentDate | date: 'M/dd/yyyy'}}<br>
+        Hours & Minutes :- {{presentDate | date: 'h:mm'}}
+    </div>
+    <h1>Currency pipe</h1>
+    <div>
+        <p>{{price | currency: 'EUR'}}</p>
+        <p>{{price | currency: 'INR'}}</p>
+    </div>
+     <h1>Json Pipe</h1>
+    <div>
+        <p>{{jsonData}}</p>
+        <p>{{jsonData | json | uppercase}}</p>
+        <p>{{jsonData | json | lowercase}}</p>
+    </div>
+    <h1>Decimal Pipe</h1>
+    <div>
+        <p>Decimal Number1 :{{decimalNumber1}}</p>
+        <p>Decimal Number2 :{{decimalNumber2}}</p>
+        <p>Apply Formatting :{{decimalNumber1 | number: '3.2'}}</p>//8.5432215;
+        <p>Apply Formatting  :{{decimalNumber1 | number: '4.4'}}</p>//8.5432215;
+        <p>Apply Formatting  :{{decimalNumber1 | number: '2.1-3'}}</p>//8.5432215;
+        <p>Apply Formatting :{{decimalNumber1 | number: '2.2-2'}}</p>//8.5432215;
+        <p>Apply Formatting :{{num | number: '3.3'}}</p>
+    </div>
+    <h1>Percentage Pipe</h1>
+    <div>
+        <p>Percentage : {{decimalNumber3}}</p>
+        <p>Percentage : {{decimalNumber3 | percent : '2.2'}}</p>
+
+    </div>
+    <h1>Slice Pipe</h1>
+    <h2>Before Slice:{{Fruits}}</h2>
+    <h2>Start Index:{{Fruits | slice:2}}</h2>
+    <h2>Start Index:{{Fruits | slice:1:4}}</h2>
+    <h2>Start Index:{{Fruits | slice:-2}}</h2>
+    <h2>Negative start & End index:{{Fruits | slice:-4:-2}}</h2>
+</body>
+

@@ -1,0 +1,56 @@
+
+<body>
+<h1>Employee Page</h1>
+
+<h2>Event Binding</h2>
+</body>
+<hr>
+<div class="yellow1">
+<h2>String Interpollation</h2>
+
+Employee Id : {{empId}}<br>
+Employee name : {{empName}}<br>
+Department : {{dept}}
+
+
+<button (click)="show()">EmpDetails</button>
+</div>
+<hr>
+<div class="yellow">
+<h1>Property Binding</h1>
+
+Employee Id : <input type="text" value={{empId}}><br>
+Employee name : <input type="text" value={{empName}}><br>
+Department : <input type="text" value={{dept}}><br>
+
+<h1>Two way Binding</h1>
+Employee Id : <input type="text" [(ngModel)]="empId"><br>
+Employee name : <input type="text" [(ngModel)]="empName"><br>
+Department : <input type="text" [(ngModel)]="dept"><br>
+</div>
+ <!-- <hr>
+<h1>Style Binding</h1>
+<p [style.color]="red">css class Red applied</p>
+<p [style.background.color]="green">css class Green applied</p>  -->
+
+<hr>
+<h1>Employee Object Demo</h1>
+<table border="2">
+    <thead>
+        <th>EmployeeId</th>
+        <th>EmployeeName</th>
+        <th>Department</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let e of EmployeeObj">
+            <td>{{e.empId}}</td>
+            <td>{{e.empName}}</td>
+            <td>{{e.dept}}</td>
+            <td *ngIf="show1">{{e.dept}}</td>
+        </tr>
+    </tbody>
+</table>
+<button (click)="show1=!show1">{{show1 ? 'Hide':'show'}}</button>
+
+
+

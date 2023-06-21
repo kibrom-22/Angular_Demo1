@@ -1,0 +1,60 @@
+<!-- <h1>*ngIf</h1>
+<div *ngIf="isLogIn else isLogedOut">
+    Hello you are loggedIn
+</div>
+<ng-template #isLogedOut>
+    you are logged out...
+</ng-template>
+
+
+<h2 *ngIf="showMe else elseBlock">
+    Welcome To Angular *ngIf
+</h2>
+<ng-template #elseBlock>
+    you are not enrolled
+</ng-template> -->
+<h1 appHighlight>*ngIf</h1>
+<div *ngIf="isLogIn else isLogedOut">
+    Hello you are loggedIn
+</div>
+<ng-template #isLogedOut>
+    you are logged out...
+</ng-template>
+
+<div class="ngFIf">
+    <input [(ngModel)]="year" placeholder="Enter a year">
+    <button (click)="checkLeapYear()">Check</button>
+    <ng-container *ngIf="year; else notLeapYear">
+      <p>{{ year }} is a leap year</p>
+    </ng-container>
+      <ng-template #notLeapYear>
+        <p>{{ year }} is not a leap year</p>
+      </ng-template>
+   
+ </div>
+ <div class="ngFor">
+
+    <h1 appHighlight>*ngFor Demo</h1>
+    <ul *ngFor="let i of department_list">
+        <li>{{i}}</li>
+    </ul>
+    {{department_list}}
+</div>
+
+    <h1 appHighlight>ngSwitch Demo</h1>
+    <div>
+
+        <label for="fruit">Select a Fruit</label>
+        <select id="fruit" [(ngModel)]="selectedFruit">
+
+            <option value="apple">Apple</option>
+            <option value="Banana">Banana</option>
+            <option value="Orange">Orange</option>
+        </select>
+        <div [ngSwitch]="selectedFruit">
+            <p *ngSwitchCase="'aplle'">You Selected Apple</p>
+            <p *ngSwitchCase="'Banana'">You Selected Banana</p>
+            <p *ngSwitchCase="'Orange'">You Selected Orange</p>
+            <p *ngSwitchDefault>Selecte a Fruit</p>
+        </div>
+    </div>

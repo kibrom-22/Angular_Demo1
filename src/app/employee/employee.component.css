@@ -1,0 +1,24 @@
+body{
+    color: aquamarine;
+    background-color: aqua;
+    text-align: center;
+    
+}
+.yellow1{
+    background-color: yellow;
+}
+.yellow1 button{
+    background-color: black;
+    color: white;
+}
+
+.yellow{
+    color: yellow;
+}
+.yellow h1{
+    background-color: yellow;
+    color: #000;
+}
+table{
+    background-color: yellow;
+}
